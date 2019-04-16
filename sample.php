@@ -20,7 +20,7 @@ SERVICE_NAME: orcl.cs.cityu.edu.hk
 
 // Prepare the statement
 //EMP is created from the tutorial
-$stid = oci_parse($conn, 'SELECT * FROM EMP');
+$stid = oci_parse($conn, 'SELECT * FROM SEATS WHERE HOUSE = 'A');
 if (!$stid) {
     $e = oci_error($conn);
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
